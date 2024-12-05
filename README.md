@@ -5,9 +5,9 @@ REST API сервис с использованием Spring Boot, которы�
 
 # Инструкция по запуску
 
-Находясь в корне проекта выполнить команду в терминале:
-
 ```bash
+git clone https://github.com/ExToozy/iot-application
+cd iot-application
 docker compose up
 ```
 
