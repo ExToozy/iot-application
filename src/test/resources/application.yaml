@@ -1,0 +1,29 @@
+spring:
+
+  config:
+    import: optional:file:.env[.properties]
+
+  application:
+    name: iot-application
+
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:tc:postgresql:latest:///iot_data
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db.changelog-master.yaml
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+server:
+  port: 8080
+
+security:
+  jwt:
+    access: 5m
+    refresh: 5d
+    secret: Z2ZoZGZnaGRmYXNnZmFzZGZlcnR5ZXJ0eWVydGl1dHlpdWtoaixubWIsY2I=
